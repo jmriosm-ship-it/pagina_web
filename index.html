@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS GAMER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="bg-glow-effect"></div>
+<div class="particles" id="particlesContainer"></div>
+
+<header>
+    <div class="logo"><span class="dot"></span>NEXUS</div>
+    <nav>
+        <a href="#productos">Catálogo Completo</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">
+        CARRITO <span class="cart-count" id="cartCount">0</span>
+    </button>
+</header>
+
+<section class="hero">
+    <div class="eyebrow">NEXUS HARDWARE CORE MATRIX</div>
+    <h1>MEGA NEXUS<br><span class="glitch">100 INF<span class="glitch-solid">INITE</span> ITEMS</span></h1>
+    <p>Explora nuestros Productos masivos de componentes, periféricos de rendimiento y hardware premium de nivel competitivo. Filtrado instantáneo en tiempo real.</p>
+    <div class="hero-meta">
+        <div><div class="num" id="totalCountMeta">100</div><div class="label">Items en Stock</div></div>
+        <div><div class="num">100%</div><div class="label">Imágenes Online</div></div>
+        <div><div class="num">⚡</div><div class="label">Rendimiento Labs</div></div>
+    </div>
+</section>
+
+<div class="filters" id="filters">
+    <button class="filter-btn active" data-cat="all">Todo (100)</button>
+    <button class="filter-btn" data-cat="teclado">Teclados</button>
+    <button class="filter-btn" data-cat="mouse">Mouses</button>
+    <button class="filter-btn" data-cat="audio">Audio</button>
+    <button class="filter-btn" data-cat="monitor">Monitores</button>
+    <button class="filter-btn" data-cat="componente">Graficas</button>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<footer>
+    <span>Jesus Manuel Rios Mejia</span>
+    <span>100 DE LOS MEJORES PRODUCTOS</span>
+</footer>
+
+<div class="modal-overlay" id="productModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div class="modal-left">
+            <img id="modalImg" src="" alt="">
+        </div>
+        <div class="modal-right">
+            <div class="modal-cat" id="modalCat"></div>
+            <h2 class="modal-title" id="modalTitle"></h2>
+            <p class="modal-desc" id="modalDesc"></p>
+            
+            <div class="tech-specs">
+                <div class="tech-row"><span class="tech-label">SISTEMA INFRAESTRUCTURA</span><span class="tech-val" style="color:var(--acid)">DISPONIBLE // STOCK OK</span></div>
+                <div class="tech-row"><span class="tech-label">VERIFICACIÓN</span><span class="tech-val">GENUINO ORIGINAL</span></div>
+                <div class="tech-row"><span class="tech-label">DESPACHO</span><span class="tech-val">INMEDIATO GLOBAL</span></div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="modal-price" id="modalPrice"></div>
+                <button class="modal-buy-btn" id="modalBuyBtn">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer-head">
+        <h2>🛒 Matriz de Compra</h2>
+        <button class="close-btn" id="closeBtn">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="drawer-foot">
+        <div class="foot-row"><span>Subtotal</span><span id="subtotal">$0</span></div>
+        <div class="foot-row"><span>Envío</span><span id="shipping">$0</span></div>
+        <div class="foot-row total"><span>Total</span><span id="total">$0</span></div>
+        <button class="checkout-btn" id="checkoutBtn" disabled>Finalizar orden matrix</button>
+    </div>
+</aside>
+
+<div class="toast" style="display:none;" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
